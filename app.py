@@ -16,7 +16,8 @@ app.config['MYSQL_PASSWORD'] = '2603e345'
 app.config['MYSQL_DB'] = 'heroku_ca64bef78eb12fd'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
-mysql = MySQL(app)
+mysql = MySQL()
+mysql.init_app(app)
 ############################################################################################
 
 
