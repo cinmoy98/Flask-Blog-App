@@ -10,10 +10,10 @@ app = Flask(__name__)
 
 #Configuring the database connection
 ############################################################################################
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'myflaskapp'
+app.config['MYSQL_HOST'] = 'us-cdbr-east-05.cleardb.net'
+app.config['MYSQL_USER'] = 'ba3d054c1bd72f'
+app.config['MYSQL_PASSWORD'] = '2603e345'
+app.config['MYSQL_DB'] = 'heroku_ca64bef78eb12fd'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
