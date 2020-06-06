@@ -5,7 +5,7 @@ from passlib.hash import sha256_crypt
 from data import Articles
 from functools import wraps
 app = Flask(__name__)
-
+app.secret_key='secret123'
 
 
 #Configuring the database connection
@@ -231,5 +231,4 @@ def delete_article(id):
 	flash('Article Deleted', 'success')
 	return redirect(url_for('dashboard'))
 if __name__=='__main__':
-	app.secret_key='secret123'
 	app.run(debug=True)
