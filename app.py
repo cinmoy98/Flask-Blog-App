@@ -157,7 +157,7 @@ def logout():
 @is_logged_in
 def dashboard():
 	cur = mysql.connection.cursor()
-	result = cur.execute("SELECT * FROM articles")
+	result = cur.execute("SELECT * FROM articles WHERE author = %s", [session['username']])
 	articles = cur.fetchall()
 
 	if result > 0:
